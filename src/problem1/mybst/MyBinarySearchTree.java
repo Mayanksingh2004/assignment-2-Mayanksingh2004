@@ -11,6 +11,13 @@ import problem1.node.TreeNode;
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
 
-    private TreeNode root;
+    private TreeNode root = null;
 
+    public boolean insert(int data) {
+        boolean response = false;
+        if (root == null) {
+            root = new TreeNode(data);
+        }
+        return response;
+    }
 }
