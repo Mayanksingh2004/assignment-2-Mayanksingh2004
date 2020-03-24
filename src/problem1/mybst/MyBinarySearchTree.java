@@ -13,10 +13,9 @@ public class MyBinarySearchTree {
 
     private TreeNode root = null;
 
-    public boolean insert(int data) {
+    public void insert(int data) {
         if (root == null) {
             root = new TreeNode(data);
         }
-
     }
 }
