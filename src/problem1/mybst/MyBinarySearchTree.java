@@ -17,6 +17,7 @@ public class MyBinarySearchTree {
         boolean response = false;
         if (root == null) {
             root = new TreeNode(data);
+
         }
         return response;
     }
