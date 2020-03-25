@@ -14,12 +14,12 @@ public class MyMain {
         tree.insert(50);
         tree.insert(25);
         tree.insert(75);
-        tree.insert(15);
         tree.insert(35);
         tree.insert(65);
         tree.insert(80);
-        tree.insert(158);
-        tree.insert(456);
+        tree.insert(67);
+        tree.insert(90);
+        tree.insert(82);
         tree.traverseInOrder(tree.getRoot());
         System.out.println();
         tree.printLeftChild(tree.getRoot());
