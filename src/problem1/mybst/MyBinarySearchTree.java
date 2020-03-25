@@ -25,7 +25,7 @@ public class MyBinarySearchTree {
             TreeNode temp = root;
             TreeNode parent = null;
             while (temp != null) {
-                temp = parent;
+                parent = temp;
                 if (temp.getData() >= node.getData()) {
                     temp = temp.getLeft();
                 } else {
