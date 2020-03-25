@@ -43,8 +43,12 @@ public class MyBinarySearchTree {
     public void traverseInOrder(TreeNode node) {
         if (node != null) {
             traverseInOrder(node.getLeft());
-            System.out.println(node.getData() + " ");
+            System.out.print(node.getData() + " ");
             traverseInOrder(node.getRight());
         }
+    }
+
+    public void printLeftChild() {
+
     }
 }
