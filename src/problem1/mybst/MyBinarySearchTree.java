@@ -14,8 +14,16 @@ public class MyBinarySearchTree {
     private TreeNode root = null;
 
     public void insert(int data) {
+        TreeNode node = new TreeNode(data);
         if (root == null) {
-            root = new TreeNode(data);
+            root = node;
+        } else {
+            TreeNode temp = root;
+            TreeNode parent = null;
+            while (temp != null) {
+
+            }
+
         }
     }
 }
