@@ -8,6 +8,9 @@ package problem1.mybst;
 
 import problem1.node.TreeNode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
 
@@ -50,10 +53,11 @@ public class MyBinarySearchTree {
 
     public void printLeftChild(TreeNode node) {
         if (node != null) {
-            printLeftChild(node.getLeft());
-            if (node != root) {
-                System.out.println(node.getData() + " ");
-            }
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.add(node);
+
+        } else {
+            throw new NullPointerException();
         }
     }
 }

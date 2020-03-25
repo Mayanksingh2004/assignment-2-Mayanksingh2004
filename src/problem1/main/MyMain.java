@@ -21,5 +21,7 @@ public class MyMain {
         tree.insert(158);
         tree.insert(456);
         tree.traverseInOrder(tree.getRoot());
+        System.out.println();
+        tree.printLeftChild(tree.getRoot());
     }
 }
