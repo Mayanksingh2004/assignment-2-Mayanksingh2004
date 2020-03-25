@@ -48,7 +48,12 @@ public class MyBinarySearchTree {
         }
     }
 
-    public void printLeftChild() {
-
+    public void printLeftChild(TreeNode node) {
+        if (node != null) {
+            printLeftChild(node.getLeft());
+            if (node != root) {
+                System.out.println(node.getData() + " ");
+            }
+        }
     }
 }
