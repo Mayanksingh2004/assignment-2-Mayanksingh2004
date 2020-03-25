@@ -52,12 +52,16 @@ public class MyBinarySearchTree {
     }
 
     public void printLeftChild(TreeNode node) {
+        int counter = 0;
         if (node != null) {
             Queue<TreeNode> queue = new LinkedList();
             queue.add(node);
+            System.out.println("Left Childs :");
             while (!queue.isEmpty()) {
                 TreeNode currentNode = queue.remove();
-
+                if (currentNode.getLeft() == null) {
+                    counter++;
+                }
                 if (currentNode.getLeft() != null) {
                     queue.add(currentNode.getLeft());
                     System.out.print(currentNode.getLeft().getData() + " ");
@@ -66,6 +70,7 @@ public class MyBinarySearchTree {
                     queue.add(currentNode.getRight());
                 }
             }
+            System.out.println("\nNo. of Nodes with no Left Child : " + counter);
         } else {
             throw new NullPointerException();
         }
