@@ -13,7 +13,7 @@ import java.util.Queue;
 
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
-
+    //
     private TreeNode root = null;
 
     public TreeNode getRoot() {
@@ -54,7 +54,7 @@ public class MyBinarySearchTree {
     public void printLeftChild(TreeNode node) {
         int counter = 0;
         if (node != null) {
-            Queue<TreeNode> queue = new LinkedList();
+            Queue<TreeNode> queue = new LinkedList<>();
             queue.add(node);
             System.out.println("Left Childs :");
             while (!queue.isEmpty()) {
@@ -74,9 +74,5 @@ public class MyBinarySearchTree {
         } else {
             throw new NullPointerException();
         }
-    }
-
-    public boolean isLeaf(TreeNode node) {
-        return node.getLeft() == null && node.getRight() == null;
     }
 }
