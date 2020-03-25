@@ -55,9 +55,12 @@ public class MyBinarySearchTree {
         if (node != null) {
             Queue<TreeNode> queue = new LinkedList<>();
             queue.add(node);
-
         } else {
             throw new NullPointerException();
         }
+    }
+
+    public boolean isLeaf(TreeNode node) {
+        return node.getLeft() == null && node.getRight() == null;
     }
 }
