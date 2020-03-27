@@ -13,13 +13,16 @@ import java.util.Queue;
 
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
-    //
+
+    //field of MyBinarySearchTree
     private TreeNode root = null;
 
+    //getter method for root
     public TreeNode getRoot() {
         return root;
     }
 
+    // insert method to insert element into the tree
     public void insert(int data) {
         TreeNode node = new TreeNode(data);
         if (root == null) {
@@ -48,6 +51,22 @@ public class MyBinarySearchTree {
             traverseInOrder(node.getLeft());
             System.out.print(node.getData() + " ");
             traverseInOrder(node.getRight());
+        }
+    }
+
+    public void traversePreOrder(TreeNode node) {
+        if (node != null) {
+            System.out.print(node.getData() + " ");
+            traversePreOrder(node.getLeft());
+            traversePreOrder(node.getRight());
+        }
+    }
+
+    public void traversePostOrder(TreeNode node) {
+        if (node != null) {
+            traversePostOrder(node.getLeft());
+            System.out.print(node.getData() + " ");
+            traversePostOrder(node.getRight());
         }
     }
 
