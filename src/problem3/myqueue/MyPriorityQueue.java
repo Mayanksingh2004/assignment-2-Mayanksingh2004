@@ -6,5 +6,12 @@
  */
 package problem3.myqueue;
 
+import problem3.node.Node;
+
 public class MyPriorityQueue {
+    private Node head = null;
+
+    public void push(int rollNumber, String name) {
+
+    }
 }
