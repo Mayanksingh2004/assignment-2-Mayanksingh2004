@@ -17,4 +17,20 @@ public class Node {
         this.rollNumber = rollNumber;
         this.name = name;
     }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
