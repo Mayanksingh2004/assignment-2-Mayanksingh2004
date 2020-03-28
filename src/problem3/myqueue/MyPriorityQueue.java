@@ -12,6 +12,9 @@ public class MyPriorityQueue {
     private Node head = null;
 
     public void push(int rollNumber, String name) {
-
+        Node node = new Node(rollNumber, name);
+        if (head == null) {
+            head = node;
+        }
     }
 }
