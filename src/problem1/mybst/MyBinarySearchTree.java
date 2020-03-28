@@ -64,9 +64,9 @@ public class MyBinarySearchTree {
 
     public void traversePostOrder(TreeNode node) {
         if (node != null) {
+            traversePostOrder(node.getRight());
             traversePostOrder(node.getLeft());
             System.out.print(node.getData() + " ");
-            traversePostOrder(node.getRight());
         }
     }
 
