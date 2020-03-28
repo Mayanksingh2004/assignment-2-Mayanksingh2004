@@ -15,6 +15,23 @@ public class MyPriorityQueue {
         Node node = new Node(rollNumber, name);
         if (head == null) {
             head = node;
+        } else {
+            if (head.getRollNumber() > node.getRollNumber()) {
+                node.setNext(head);
+                head = node;
+            } else {
+                Node temp = head;
+                Node previous = null;
+                while (temp != null) {
+                    previous = temp;
+                    if (temp.getRollNumber() < node.getRollNumber()) {
+                        temp = temp.getNext();
+                    } else {
+                        previous.setNext(node);
+                        node.setNext(temp);
+                    }
+                }
+            }
         }
     }
 }
