@@ -11,4 +11,10 @@ public class Node {
     private Node next = null;
     private int rollNumber = 0;
     private String name = "Unnamed";
+
+    public Node(int rollNumber, String name) {
+        this.next = null;
+        this.rollNumber = rollNumber;
+        this.name = name;
+    }
 }
