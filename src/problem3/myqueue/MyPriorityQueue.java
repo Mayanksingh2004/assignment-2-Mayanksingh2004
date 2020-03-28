@@ -39,4 +39,9 @@ public class MyPriorityQueue {
     public void peek() {
         System.out.println(front.getRollNumber() + "  " + front.getName());
     }
+
+    public void pop() {
+        System.out.println(front.getRollNumber() + "  " + front.getName());
+        front = front.getNext();
+    }
 }
