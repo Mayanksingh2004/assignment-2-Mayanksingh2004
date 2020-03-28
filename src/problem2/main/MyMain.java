@@ -35,6 +35,6 @@ public class MyMain {
         System.out.println("\nPostOrder :");
         //here root is the last element
         tree.traversePostOrder(tree.getRoot());
-        //they hava a common midpoint
+        //they have a common midpoint
     }
 }
