@@ -6,16 +6,14 @@
  */
 package problem3.node;
 
-public class Node {
+public class Node<E> {
 
     private Node next = null;
-    private int rollNumber = 0;
-    private String name = "Unnamed";
+    private E data;
 
-    public Node(int rollNumber, String name) {
+    public Node(E data) {
         this.next = null;
-        this.rollNumber = rollNumber;
-        this.name = name;
+        this.data = data;
     }
 
     public Node getNext() {
@@ -26,11 +24,7 @@ public class Node {
         this.next = next;
     }
 
-    public int getRollNumber() {
-        return rollNumber;
-    }
-
-    public String getName() {
-        return name;
+    public E getData() {
+        return data;
     }
 }

@@ -7,24 +7,28 @@
 package problem3.myqueue;
 
 import problem3.node.Node;
+import problem3.student.Student;
 
-public class MyPriorityQueue {
-    private Node front = null;
 
-    public void push(int rollNumber, String name) {
-        Node node = new Node(rollNumber, name);
+public class MyPriorityQueue<E> {
+    private Node<Student> front = null;
+
+    public void enqueue(Student data) {
+        Node<Student> node = new Node<>(data);
         if (front == null) {
             front = node;
+        } else if (front.getData().getRollNumber() == node.getData().getRollNumber()) {
+            System.out.println("Duplicate Entry");
         } else {
-            if (front.getRollNumber() > node.getRollNumber()) {
+            if (front.getData().getRollNumber() > node.getData().getRollNumber()) {
                 node.setNext(front);
                 front = node;
             } else {
-                Node temp = front;
+                Node<Student> temp = front;
                 Node previous = null;
-                while (temp != null && temp.getRollNumber() < node.getRollNumber()) {
+                while (temp != null && temp.getData().getRollNumber() < node.getData().getRollNumber()) {
                     previous = temp;
-                    if (temp.getRollNumber() < node.getRollNumber()) {
+                    if (temp.getData().getRollNumber() < node.getData().getRollNumber()) {
                         temp = temp.getNext();
                     }
                 }
@@ -37,11 +41,11 @@ public class MyPriorityQueue {
     }
 
     public void peek() {
-        System.out.println(front.getRollNumber() + "  " + front.getName());
+        System.out.println(front.getData().getRollNumber() + "  " + front.getData().getName());
     }
 
-    public void pop() {
-        System.out.println(front.getRollNumber() + "  " + front.getName());
+    public void dequeue() {
+        System.out.println(front.getData().getRollNumber() + "  " + front.getData().getName());
         front = front.getNext();
     }
 }
