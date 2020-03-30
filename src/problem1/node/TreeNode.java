@@ -11,13 +11,23 @@ public class TreeNode {
     // These are fields of Tree
     private TreeNode left;
     private TreeNode right;
+    private TreeNode parent;
     private int data;
 
     //Constructor to initialize the fields
     public TreeNode(int data) {
         this.left = null;
         this.right = null;
+        this.parent = null;
         this.data = data;
+    }
+
+    public TreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(TreeNode parent) {
+        this.parent = parent;
     }
 
     //getter method for left child

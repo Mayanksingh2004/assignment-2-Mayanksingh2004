@@ -29,19 +29,21 @@ public class MyBinarySearchTree {
             root = node;
         } else {
             TreeNode temp = root;
-            TreeNode parent = null;
+            TreeNode previous = null;
             while (temp != null) {
-                parent = temp;
+                previous = temp;
                 if (temp.getData() >= node.getData()) {
                     temp = temp.getLeft();
                 } else {
                     temp = temp.getRight();
                 }
             }
-            if (parent.getData() >= node.getData()) {
-                parent.setLeft(node);
+            if (previous.getData() >= node.getData()) {
+                previous.setLeft(node);
+                node.setParent(previous);
             } else {
-                parent.setRight(node);
+                previous.setRight(node);
+                node.setParent(previous);
             }
         }
     }
