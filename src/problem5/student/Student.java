@@ -50,4 +50,10 @@ public class Student {
     public void setAppearingCount(int appearingCount) {
         this.appearingCount = appearingCount;
     }
+
+    @Override
+    public String toString() {
+        return "Roll no : " + this.getRollNumber() + " , Name : " + this.getName() + " , Backlog : "
+                + this.getBacklog() + " , Appearing Count : " + this.getAppearingCount();
+    }
 }

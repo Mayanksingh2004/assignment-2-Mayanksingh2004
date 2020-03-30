@@ -95,5 +95,17 @@ public class MyBinarySearchTree {
         }
     }
 
+    public TreeNode preOrderSuccessor(TreeNode node) {
+        if (node.getLeft() != null) {
+            return node.getLeft();
+        }
+        TreeNode temp = node.getRight();
+        TreeNode previous = null;
+        while (temp != null) {
+            previous = temp;
+            temp = temp.getLeft();
+        }
+        return previous;
+    }
 
 }

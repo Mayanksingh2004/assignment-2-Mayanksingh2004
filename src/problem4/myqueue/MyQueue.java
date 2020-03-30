@@ -25,7 +25,19 @@ public class MyQueue<E> {
     }
 
     public void dequeue() {
-        front = front.getNext();
+        if (!isEmpty()) {
+            System.out.println(front.getData() + " is deleted.");
+            front = front.getNext();
+        } else {
+            System.out.println("Underflow.");
+        }
     }
 
+    public boolean isEmpty() {
+        boolean response = false;
+        if (front == null) {
+            response = true;
+        }
+        return response;
+    }
 }
