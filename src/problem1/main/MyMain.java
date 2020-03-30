@@ -27,5 +27,6 @@ public class MyMain {
         tree.insert(82);
         tree.insert(93);
         tree.printLeftChild(tree.getRoot());
+
     }
 }

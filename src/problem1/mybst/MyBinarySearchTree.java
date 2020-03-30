@@ -75,7 +75,7 @@ public class MyBinarySearchTree {
         if (node != null) {
             Queue<TreeNode> queue = new LinkedList<>();
             queue.add(node);
-            System.out.println("Left Childs :");
+            System.out.println("Left Child's are :");
             while (!queue.isEmpty()) {
                 TreeNode currentNode = queue.remove();
                 if (currentNode.getLeft() == null) {
@@ -94,4 +94,6 @@ public class MyBinarySearchTree {
             throw new NullPointerException();
         }
     }
+
+
 }
