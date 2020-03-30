@@ -102,12 +102,15 @@ public class MyBinarySearchTree {
             return node.getLeft();
         }
         TreeNode temp = node.getRight();
-        TreeNode previous = null;
-        while (temp != null) {
-            previous = temp;
-            temp = temp.getLeft();
+        if (temp == null) {
+            TreeNode currParent = node.getParent();
+            while (currParent.getRight() == null) {
+                currParent = currParent.getParent();
+            }
+            return currParent.getRight();
         }
-        return previous;
+
+        return temp;
     }
 
 }
